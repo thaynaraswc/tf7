@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>Guia de Palmas</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.material.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="theme-teal">
+  <!-- Status bar overlay for fullscreen mode-->
+      <div class="statusbar-overlay"></div>
+      <!-- Right panel with cover effect-->
+      <div class="panel panel-right panel-reveal">
+        <div class="content-block">
+          <p>Right panel content goes here</p>
+        </div>
+      </div>
+      <!-- Views-->
+      <div class="views">
+        <!-- Put panels-overlay and left-panel with view inside of views-->
+        <!-- Panels overlay-->
+        <div class="panel-overlay"></div>
+        <!-- Left panel with reveal effect-->
+        <div class="panel panel-left panel-cover">
+          <!-- Left view-->
+          <div class="view view-left navbar-through">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="left"></div>
+                <div class="center sliding">Menu</div>
+                <div class="right"></div>
+              </div>
+            </div>
+            <div class="pages">
+              <div data-page="index-left" class="page">
+                <div class="page-content">
+                  <div class="content-block-title">Olá, fique à vontade!</div>
+                  <div class="list-block">
+                    <ul>
+                      <li><a href="left-page-1.html" class="item-link">
+                          <div class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title">Início</div>
+                            </div>
+                          </div></a></li>
+                      <li><a href="left-page-2.html" class="item-link">
+                          <div class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title">Destinos</div>
+                            </div>
+                          </div></a></li>
+                    </ul>
+                  </div>
+                  <div class="content-block-title">Desenvolvedor</div>
+                  <div class="list-block">
+                    <ul>
+                      <li><a href="#" data-view=".view-main" class="item-link close-panel">
+                          <div class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title">Sobre</div>
+                            </div>
+                          </div></a></li>
+                      <li><a href="#" data-view=".view-main" class="item-link close-panel">
+                          <div class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title">Serviços</div>
+                            </div>
+                          </div></a></li>
+                      <li><a href="#" data-view=".view-main" class="back item-link close-panel">
+                          <div class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title">Voltar</div>
+                            </div>
+                          </div></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Right view, it is main view-->
+        <div class="view view-main navbar-through">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="center sliding"></div>
+              <div class="right"><a href="#" data-panel="left" class="link open-panel icon-only"><i class="icon icon-bars"></i></a></div>
+            </div>
+          </div>
+          <!-- Pages-->
+          <div class="pages">
+            <!-- Page, data-page contains page name-->
+            <div data-page="index-1" class="page">
+              <!-- Scrollable page content-->
+              <div class="page-content">
+                <div class="content-block-title">Estabelecimentos</div>
+                <div class="page-content">
+                    <div class="content-block">
+                      <div class="swiper-container swiper-1 scroll">
+                          <div class="swiper-pagination"></div>
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide"><span>Slide 1</span></div>
+                            <div class="swiper-slide"><span>Slide 2</span></div>
+                            ...
+                            <div class="swiper-slide"><span>Slide 10</span></div>
+                          </div>
+                        </div>
+
+
+                      <div class=" row">
+                      <!-- Default preloader -->
+                      <div class="col-auto">
+                        Papelaria<br>
+                        <img src="img/nabla.png">
+                      </div>
+
+                      <div class="col-auto">
+                        Academia<br>
+                        <img src="img/ulb.png">
+                      </div>
+
+                      <div class="col-auto">
+                        Salão de beleza<br>
+                        <img src="img/coc.png">
+                      </div>
+
+                    </div>
+                  </div>
+                  </div>
+                <div class="list-block">
+                  <ul>
+                    <li><a href="#" class="item-link">
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title">Opção 1</div>
+                          </div>
+                        </div></a></li>
+                    <li><a href="#" class="item-link">
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title">Opção 2</div>
+                          </div>
+                        </div></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <script>
+      window.addEventListener("touchstart", func, {passive: true} );
+    </script>
+</body>
+
+</html>

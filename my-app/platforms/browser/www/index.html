@@ -21,7 +21,7 @@
     <meta name="msapplication-tap-highlight" content="no">
 
     <!-- Your app title -->
-    <title>My App</title>
+    <title>Guia de Palmas</title>
 
     <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
         http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
@@ -29,117 +29,222 @@
 
     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.material.min.css">
 
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
-    <!-- Status bar overlay for full screen mode (PhoneGap) -->
-    <div class="statusbar-overlay"></div>
-
-    <!-- Panels overlay-->
-    <div class="panel-overlay"></div>
-    <!-- Left panel with reveal effect-->
-    <div class="panel panel-left panel-reveal">
-        <div class="content-block theme-teal">
-            <p>Left panel content goes here</p>
+<body class="theme-teal">
+  <!-- Status bar overlay for fullscreen mode-->
+      <div class="statusbar-overlay"></div>
+      <!-- Right panel with cover effect-->
+      <div class="panel panel-right panel-reveal">
+        <div class="content-block">
+          <p>Right panel content goes here</p>
         </div>
-    </div>
-
-    <!-- Views -->
-    <div class="views">
-        <!-- Your main view, should have "view-main" class -->
-        <div class="view view-main">
-            <!-- Top Navbar-->
+      </div>
+      <!-- Views-->
+      <div class="views">
+        <!-- Put panels-overlay and left-panel with view inside of views-->
+        <!-- Panels overlay-->
+        <div class="panel-overlay"></div>
+        <!-- Left panel with reveal effect-->
+        <div class="panel panel-left panel-cover">
+          <!-- Left view-->
+          <div class="view view-left navbar-through">
             <div class="navbar">
-                <div class="navbar-inner">
-                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
-                    <div class="center sliding">Awesome App</div>
-                    <div class="right">
-                        <!--
-                          Right link contains only icon - additional "icon-only" class
-                          Additional "open-panel" class tells app to open panel when we click on this link
-                        -->
-                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
-                    </div>
-                </div>
+              <div class="navbar-inner">
+                <div class="left"></div>
+                <div class="center sliding">Menu</div>
+                <div class="right"></div>
+              </div>
             </div>
-            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
-            <div class="pages navbar-through toolbar-through">
-                <!-- Page, "data-page" contains page name -->
-                <div data-page="index" class="page">
-                    <!-- Scrollable page content -->
-                    <div class="page-content">
-
-  <div class="content-block-title">1 Slide Per View, 50px Between</div>
-  <div class="swiper-container swiper-1">
-    <div class="swiper-pagination"></div>
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><span>Slide 1</span></div>
-      <div class="swiper-slide"><span>Slide 2</span></div>
-      ...
-      <div class="swiper-slide"><span>Slide 10</span></div>
-    </div>
-  </div>
-
-  <div class="content-block-title">2 Slides Per View, 20px Between</div>
-  <div class="swiper-container swiper-2">
-    <div class="swiper-pagination"></div>
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><span><img src="img/q.png"> Slide 1</span></div>
-      <div class="swiper-slide"><span>Slide 2</span></div>
-      <div class="swiper-slide"><span>Slide 3</span></div>
-      <div class="swiper-slide"><span>Slide 4</span></div>
-      <div class="swiper-slide"><span>Slide 10</span></div>
-    </div>
-  </div>
-
-  <div class="content-block-title">3 Slides Per View, 10px Between</div>
-  <div class="swiper-container swiper-3">
-    <div class="swiper-pagination"></div>
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><span>Slide 1</span></div>
-      <div class="swiper-slide"><span>Slide 2</span></div>
-      ...
-      <div class="swiper-slide"><span>Slide 10</span></div>
-    </div>
-  </div>
-
-  <div class="content-block-title">Vertical, 0px Between</div>
-  <div class="swiper-container swiper-vertical">
-    <div class="swiper-pagination"></div>
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><span>Slide 1</span></div>
-      <div class="swiper-slide"><span>Slide 2</span></div>
-      ...
-      <div class="swiper-slide"><span>Slide 5</span></div>
-    </div>
-  </div>
-
-  <div class="content-block-title">Slow speed</div>
-  <div class="swiper-container swiper-slow">
-    <div class="swiper-pagination"></div>
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><span>Slide 1</span></div>
-      <div class="swiper-slide"><span>Slide 2</span></div>
-      ...
-      <div class="swiper-slide"><span>Slide 10</span></div>
-    </div>
-  </div>
-
-</div>
+            <div class="pages">
+              <div data-page="index-left" class="page">
+                <div class="page-content">
+                  <div class="content-block-title">Olá, fique à vontade!</div>
+                  <div class="list-block">
+                    <ul>
+                      <li><a href="left-page-1.html" class="item-link">
+                          <div class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title">Início</div>
+                            </div>
+                          </div></a></li>
+                      <li><a href="estabelecimentos.html" class="item-link">
+                          <div class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title">Estabelecimentos</div>
+                            </div>
+                          </div></a></li>
+                    </ul>
+                  </div>
+                  <div class="content-block-title">Desenvolvedor</div>
+                  <div class="list-block">
+                    <ul>
+                      <li><a href="#" data-view=".view-main" class="item-link close-panel">
+                          <div class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title">Sobre</div>
+                            </div>
+                          </div></a></li>
+                      <li><a href="#" data-view=".view-main" class="item-link close-panel">
+                          <div class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title">Serviços</div>
+                            </div>
+                          </div></a></li>
+                      <li><a href="#" data-view=".view-main" class="back item-link close-panel">
+                          <div class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title">Voltar</div>
+                            </div>
+                          </div></a></li>
+                    </ul>
+                  </div>
                 </div>
+              </div>
             </div>
-            <!-- Bottom Toolbar-->
-            <div class="toolbar">
-                <div class="toolbar-inner">
-                    <!-- Toolbar links -->
-                    <a href="#" class="link">Link 1</a>
-                    <a href="#" class="link">Link 2</a>
-                </div>
-            </div>
+          </div>
         </div>
-    </div>
+        <!-- Right view, it is main view-->
+        <div class="view view-main navbar-through">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="center sliding"></div>
+              <div class="right"><a href="#" data-panel="left" class="link open-panel icon-only"><i class="icon icon-bars"></i></a></div>
+            </div>
+          </div>
+          <!-- Pages-->
+          <div class="pages">
+            <!-- Page, data-page contains page name-->
+            <div data-page="index-1" class="page">
+              <!-- Scrollable page content-->
+              <div class="page-content">
+                <div class="content-block-title">Destinos - Escolas/Faculdades</div>
+                <div class="list-block media-list inset">
+
+                  <ul>
+                      <li>
+                        <a href="#" class="item-link item-content">
+                          <div class="item-media"><img src="img/q.png" width="44"></div>
+                          <div class="item-inner">
+                            <div class="item-title-row">
+                              <div class="item-title">Universidade Federal do Tocantins</div>
+                            </div>
+                            <div class="item-subtitle">Campus de Palmas</div>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" class="item-link item-content">
+                          <div class="item-media"><img src="img/sdc.png" width="44"></div>
+                          <div class="item-inner">
+                            <div class="item-title-row">
+                              <div class="item-title">Faculdade Serra do Carmo</div>
+                            </div>
+                            <div class="item-subtitle">Instituição Particular</div>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" class="item-link item-content">
+                          <div class="item-media"><img src="img/ulb.png" width="44"></div>
+                          <div class="item-inner">
+                            <div class="item-title-row">
+                              <div class="item-title">Centro Universitário Luterano de Palmas</div>
+                            </div>
+                            <div class="item-subtitle">Instituição Particular</div>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" class="item-link item-content">
+                          <div class="item-media"><img src="img/ctl.jpg" width="44"></div>
+                          <div class="item-inner">
+                            <div class="item-title-row">
+                              <div class="item-title">Católica do Tocantins - FACTO</div>
+                            </div>
+                            <div class="item-subtitle">Instituição Particular</div>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" class="item-link item-content">
+                          <div class="item-media"><img src="img/fapal.jpg" width="44"></div>
+                          <div class="item-inner">
+                            <div class="item-title-row">
+                              <div class="item-title">Faculdade de Palmas - FAPAL</div>
+                            </div>
+                            <div class="item-subtitle">Instituição Particular</div>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" class="item-link item-content">
+                          <div class="item-media"><img src="img/coc.png" width="44"></div>
+                          <div class="item-inner">
+                            <div class="item-title-row">
+                              <div class="item-title">COC - Unidade Palmas</div>
+                            </div>
+                            <div class="item-subtitle">Instituição Particular</div>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" class="item-link item-content">
+                          <div class="item-media"><img src="img/Olimpo1.png" width="44"></div>
+                          <div class="item-inner">
+                            <div class="item-title-row">
+                              <div class="item-title">Olimpo - Unidade Palmas</div>
+                            </div>
+                            <div class="item-subtitle">Instituição Particular</div>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" class="item-link item-content">
+                          <div class="item-media"><img src="img/nabla.png" width="44"></div>
+                          <div class="item-inner">
+                            <div class="item-title-row">
+                              <div class="item-title">Nabla - Unidade Palmas</div>
+                            </div>
+                            <div class="item-subtitle">Instituição Particular</div>
+                          </div>
+                        </a>
+                      </li>
+
+                    </ul>
+
+                </div>
+                <div class="list-block">
+                  <ul>
+                    <li><a href="#" class="item-link">
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title">Opção 1</div>
+                          </div>
+                        </div></a></li>
+                    <li><a href="#" class="item-link">
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title">Opção 2</div>
+                          </div>
+                        </div></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>

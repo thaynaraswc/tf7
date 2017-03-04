@@ -74,4 +74,4 @@ var mySwiperVertical = myApp.swiper('.swiper-vertical', {
 var mySwiperSlow = myApp.swiper('.swiper-slow', {
   pagination:'.swiper-slow .swiper-pagination',
   speed: 600
-});  
+});            
